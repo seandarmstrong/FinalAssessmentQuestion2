@@ -1,0 +1,30 @@
+﻿@model System.Collections.Generic.IEnumerable<FinalAssessmentQuestion2.Models.CustomerViewModel>
+
+@{
+    ViewBag.Title = "Customers";
+
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+<tr>
+    <th>
+        @Html.DisplayNameFor(model => model.CustomerId)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.CompanyName)
+    </th>
+</tr>
+@foreach (var item in Model)
+{
+    <tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.CustomerId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CompanyName)
+    </td>
+    </tr>
+}
+</table>
